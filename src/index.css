@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+/* Global Smoothness Enhancements 
+  These settings help the Desktop version feel as "seamless" as the Mobile version.
+*/
+
+:root {
+  scroll-behavior: smooth;
+  /* Softens the transitions for layout shifts */
+  --transition-speed: 0.3s;
+}
+
+body {
+  /* Makes fonts look sharper and cleaner on high-res Desktop monitors */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafaf9;
+}
+
+/* Adds a subtle "fade" effect when the layout switches between 
+  Mobile (1 column) and Desktop (Grid) 
+*/
+main, header {
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-out;
+}
+
+/* Ensures that when you hover over cards on Desktop, 
+  they move with the same organic feel as a touch interaction 
+*/
+.group {
+  transition: transform var(--transition-speed) cubic-bezier(0.34, 1.56, 0.64, 1), 
+              box-shadow var(--transition-speed) ease;
+}
+
+/* Custom scrollbar to keep the "Seamless" look on Desktop */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #d6d3d1;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a8a29e;
+  }
+}
