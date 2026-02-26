@@ -31,12 +31,12 @@ import {
 // --- CONFIGURATION ---
 // 🔴 IMPORTANT: Replace these with your actual keys from Firebase Console
 const firebaseConfig = {
-  apiKey: "AIzaSyBxLlrd5TyOCHwIjMX17gqsC-0DR-zNmjY",
-  authDomain: "student-tracker-app-8ab00.firebaseapp.com",
-  projectId: "student-tracker-app-8ab00",
-  storageBucket: "student-tracker-app-8ab00.firebasestorage.app",
-  messagingSenderId: "927375761456",
-  appId: "1:927375761456:web:312a8e6f88078a51c30df5",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 const apiKey = ""; // Gemini API Key (Optional)
