@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+body {
+  font-family: 'Inter', sans-serif;
+}
+
 /* Global Smoothness Enhancements 
   These settings help the Desktop version feel as "seamless" as the Mobile version.
 */
