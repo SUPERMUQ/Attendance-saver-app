@@ -82,7 +82,7 @@ export default function App() {
     };
 
     const unsubC = onSnapshot(
-      query(collection(db, 'users', user.uid, 'classes'), orderBy('repDate', 'asc')),
+      query(collection(db, 'users', user.uid, 'classes'), orderBy('repDate', 'desc')),
       (snap) => { 
         setClasses(snap.docs.map(d => ({ id: d.id, ...d.data() }))); 
         cLoaded = true; 
@@ -90,7 +90,7 @@ export default function App() {
       }
     );
     const unsubE = onSnapshot(
-      query(collection(db, 'users', user.uid, 'exams'), orderBy('date', 'asc')),
+      query(collection(db, 'users', user.uid, 'exams'), orderBy('date', 'desc')),
       (snap) => { 
         setExams(snap.docs.map(d => ({ id: d.id, ...d.data() }))); 
         eLoaded = true; 
